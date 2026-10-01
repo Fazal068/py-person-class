@@ -11,8 +11,8 @@ def create_person_list(people_data: list) -> list:
     Person.people.clear()
 
     person_instances = [
-        Person(name=person_dict["name"], age=person_dict["age"])
-        for person_dict in people_data
+        Person(name=p["name"], age=p["age"])
+        for p in people_data
     ]
 
     for person_dict in people_data:
